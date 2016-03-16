@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Average+Sans);
+
+body {
+   background-color: hsl(185, 60%, 12%);
+   color: hsl(200, 5%, 80%);
+   font: 3.4em 'average sans', sans-serif;
+   line-height: 1.6em;
+   margin: 0;
+   padding: 2em 0 0 2em;
+   width: 15em;
+}
+
+a, a:link, a:visited {
+   color: hsl(50, 50%, 65%);
+   padding: .08em;
+   text-decoration: none;
+   transition: 400ms;
+}
+
+a:hover, a:active {
+   background-color: hsl(185, 60%, 15%);
+}
+
+p { margin: 0 0 1em; }
+
+@media screen and (max-width:960px) {
+   body {
+      font-size: 2.4em;
+   }
+}
