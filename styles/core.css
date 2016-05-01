@@ -17,8 +17,9 @@ body > div {
    justify-content: center;
    align-content: center;
    margin: 0 auto;
-   max-width: 30em;
+   max-width: 36em;
    min-height: 100vh;
+   padding: 4em 3em;
 }
 
 main, address {
@@ -71,11 +72,13 @@ a:hover, a:active {
 }
 
 @media screen and (max-width:48em) {
-   body { font-size: 2.3em; }
-   div.fc { padding: 0.6em; }
+   body > div { padding: 0.6em; }
+   main { font-size: 0.5em; }
+   address { flex-flow: column; }
 }
 
 @media screen and (min-width:48em) and (max-width:64em) {
-   body { font-size: 3.2em; }
-   div.fc { padding: 1.2em; }
+   body > div { padding: 1em; }
+   main { font-size: 1em; }
+   address { flex-flow: row; }
 }
