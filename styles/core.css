@@ -46,7 +46,7 @@ address > ul {
 	font: normal 300 0.4em/1.2em "catamaran", sans-serif;
 	list-style: none;
 	margin: 0 2em 0 0;
-	padding: 1em;
+	padding: 1em 0.5em;
    flex: 0 auto;
 }
 
