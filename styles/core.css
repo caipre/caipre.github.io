@@ -1,30 +1,81 @@
-@import url(https://fonts.googleapis.com/css?family=Average+Sans);
+@import url(/styles/fontello.css);
+@import url(https://fonts.googleapis.com/css?family=Catamaran:400&subset=latin);
+
+* { box-sizing: border-box; }
 
 body {
-   background-color: hsl(185, 60%, 12%);
-   color: hsl(200, 5%, 80%);
-   font: 3.4em 'average sans', sans-serif;
-   line-height: 1.6em;
+   background-color: hsl(225, 7%, 8%);
+   color: hsl(225, 7%, 42%);
+   font: 400 3em/1em 'catamaran', sans-serif;
    margin: 0;
-   padding: 2em 0 0 2em;
-   width: 15em;
+   padding: 0;
+}
+
+body > div {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-content: center;
+   margin: 0 auto;
+   max-width: 30em;
+   min-height: 100vh;
+}
+
+main, address {
+   flex: 1 100%;
+}
+
+main {
+	font-size: 1.6em;
+   line-height: 1.2em;
+   margin-bottom: 1em;
+}
+
+p { margin: 0; }
+
+em {
+   color: hsl(225, 7%, 73%);
+   font-style: normal;
+}
+
+address { display: flex; }
+
+address > ul {
+	border-top: 2px solid hsl(225, 7%, 20%);
+	font: normal 300 0.4em/1.2em "catamaran", sans-serif;
+	list-style: none;
+	margin: 0 2em 0 0;
+	padding: 1em;
+   flex: 0 auto;
+}
+
+li[class^="icon-"]::before {
+   color: hsl(225, 7%, 40%);
+   margin: 0 0.5em 0.6em 0;
+}
+
+.icon-book::before {
+   position: relative;
+   top: 0.1em;
 }
 
 a, a:link, a:visited {
-   color: hsl(50, 50%, 65%);
-   padding: .08em;
+   color: hsl(225, 7%, 40%);
    text-decoration: none;
-   transition: 400ms;
+   transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 a:hover, a:active {
-   background-color: hsl(185, 60%, 15%);
+   color: hsl(225, 7%, 73%);
+
 }
 
-p { margin: 0 0 1em; }
+@media screen and (max-width:48em) {
+   body { font-size: 2.3em; }
+   div.fc { padding: 0.6em; }
+}
 
-@media screen and (max-width:960px) {
-   body {
-      font-size: 2.4em;
-   }
+@media screen and (min-width:48em) and (max-width:64em) {
+   body { font-size: 3.2em; }
+   div.fc { padding: 1.2em; }
 }

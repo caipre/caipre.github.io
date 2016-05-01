@@ -7,12 +7,36 @@
    </head>
 
    <body>
-      <p>
-         Hi there, I'm Nick Platt.
-      </p>
-      <p>
-         I work as a core engineer at <a href="https://deepis.com">deep.is</a> in Boston building
-         a next-generation database engine.
-      </p>
+      <div>
+         <main>
+            <p>
+               Hello there. I&#x2019;m <em>Nick Platt</em>, a systems level
+               <em>software engineer</em> interested in programming languages,
+               operating systems, databases, cryptography, and machine learning.
+               I&#x2019;m also an avid <em>traveler</em>, backpacker, and
+               cyclist.
+            </p>
+         </main>
+         <address>
+            <ul>
+               <li class="icon-paper-plane"><a id="email"></a></li>
+               <li class="icon-book"><a href="/">view my portfolio</a></li>
+            </ul>
+            <ul>
+               <li class="icon-key"><a href="https://keybase.io/caipre">keybase.io/caipre</a></li>
+               <li class="icon-github"><a href="https://github.com/caipre">github.com/caipre</a></li>
+               <li class="icon-twitter"><a href="https://twitter.com/caipre_">twitter.com/caipre_</a></li>
+            </ul>
+         </address>
+      </div>
    </body>
+   <script type="text/javascript">
+      window.onload = (function() {
+         var strs = ["hello", document.location.hostname],
+             elem = document.getElementById("email");
+             addr = strs.join("@");
+         elem.href="mailto:" + addr;
+         elem.textContent = addr;
+      });
+   </script>
 </html>
