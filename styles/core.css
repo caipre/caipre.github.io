@@ -75,6 +75,7 @@ a:hover, a:active {
    body > div { padding: 0.6em; }
    main { font-size: 0.5em; }
    address { flex-flow: column; }
+   address > ul { margin: 0; }
 }
 
 @media screen and (min-width:48em) and (max-width:64em) {
