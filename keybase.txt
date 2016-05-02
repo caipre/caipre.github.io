@@ -4,7 +4,7 @@ https://keybase.io/caipre
 
 I hereby claim:
 
-  * I am an admin of https://caipre.github.io
+  * I am an admin of https://nick-platt.com
   * I am caipre (https://keybase.io/caipre) on keybase.
   * I have a public key with fingerprint 4CA8 A480 4465 5AC1 90CD  08EF 70DE 05AE 7A63 2BC6
 
@@ -21,17 +21,22 @@ To do so, I am signing this object:
             "uid": "c5320abad17154bd4af71b9695157f00",
             "username": "caipre"
         },
+        "revoke": {
+            "sig_ids": [
+                "51a73c43e2f269d9faf57c7590a2aa99027db5d9f94d126ad821962ed5ce2d870f"
+            ]
+        },
         "service": {
-            "hostname": "caipre.github.io",
+            "hostname": "nick-platt.com",
             "protocol": "https:"
         },
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1462129568,
+    "ctime": 1462189042,
     "expire_in": 157680000,
-    "prev": "1539de198d0fb3573f25cd91e16e3bc80c3ab6a4faead3c5df7690c25eed8cb3",
-    "seqno": 5,
+    "prev": "e996c64e69d749ba1db7b36f0f5e6bd6594af568b57cc8090c7687762409d049",
+    "seqno": 7,
     "tag": "signature"
 }
 
@@ -41,23 +46,24 @@ which yields the signature:
 Version: Keybase OpenPGP v2.0.53
 Comment: https://keybase.io/crypto
 
-yMIkAnicrVJbSFRBGF5viUKxWQldHmqKMJF15pwz57IPUZEIESZJRWEtczvrSdvd
-ds9uqRSRFWFoQcVi9CBIRRGFkZREZXaDjMikKImiCwmRWhQYdJ1j9RD02LwM8//f
-9833/TM3Jmb58jNe+XfWzavoeJTRd60t6Vszv6q9EdAorwfBRlArxjdRx0XCDdU6
-HAQBRBCZqmVAU8eqopkWxTbnHBKMiUWhwriim4woFBsM2xrhuqlgDVmEE4UjZMqG
-BgkoAbYTCYt4LO5EXCmrMWISzYSapkshhizIODSFbUAuICbCILqqUKZLYk004TGk
-OUoSIuBEZU0eQuP2/oH/z76T43JMikBCCUcGwhrlGrENRC3dwggbNoQeMCHiEbJJ
-eGjixOICbCsBspZymPDG6uX4qx8IO25Nkv5KFItH3SiL1slujevGEkGP7dbHPPgW
-QUO/hULUiXA5SclIiXjCiUZAEEkkcx1PGWm6ghQL62YJEFtjTlyEHA+BDd2Ecnn3
-iJSURFi1uECWyaFNVWyotoIZt5BAulApMyFTCdWJZhNBuMowtw1dvpGCheAmoyrw
-om2OREEQS5skLCUTTjhC3KSXu7enOtuXke+bkJPp/TBffp7/z78bwrnflZYd7552
-Zq0s6O081vyDtYZmtk5rbDq4IuvqQGll19LhU0WXFodHMwsyT884my5fWPbUmRl+
-ONaxf2OaHs8buP/icPWhRP+oj7++It7MWna+aHX3pz3gzvP1dwcegyV9exZcKEgn
-K8/7Zk81Gz6fuvVyWsPHvU2BwV3H+0Hh5J2lt1teFJdtu7l9aOG3/c/8z8aWva3q
-/JAOnFxrrzrXNFg4sb6oJfU8e/j6xXkNe9vzT6QW+bOLJ9XsHslTjebRIxtu9Xa/
-aj3cWjvy3v+lrWckd26ZfUC/vG6w8/Xs7Ka+o6CrYvqNOV+nPFlSX1hV/mB3unfS
-amtfuCHzzLlk1/KhwL3bOf0/AbU6QfM=
-=M8WY
+yMJtAnicrZJfiFVFHMfvupl4rWUFHwQlrodkH1qXmbnz58wRSQOLWgnEIGuT25yZ
+OXeP93rO8Zyz19WLRVYPUa7gUlLRGqT00PqnvfYQbP7HP1cRQfEPmQ+KguuD7YqC
+fyLnLPrWY/MyzMz39/l95ztz9MXWXL7levum6stv/3Sh5dShu325dzsWTtQtN1Tr
+LaduVfTkpKtKJ2mp4ivLsQAE0C5yBmxKigjb3CWeUgoIQgR3AZIKUVsK5BImiYeF
+ojYiGHKhBFIQ2uYAA2F1Wp4flHUcxX6QGiyWwhbYBhhTA5KQA6mArT0GlAZEaCZo
+EbmSmsLeMMkqjDlXJLrLD82eWZQm7f2H/n/23TeJkwYChCsUZJBgV2HhMehyygkk
+zAMgEyY6DsQanamFH8Xa2thpxboWVnSWauKXjeXEcnosAgUrSlzUyEOUK+4Jz7hg
+hAOBhOAcIKZcYvY5VhBRoWwEOUVaEamRshnwrFWGbfrVfDkJzzJ62jvwZWVBVBVp
+2iXDNcZXFIdpKMOqOetN0yhxMl/p+igTr9Nu6Smm5PqBMm9kKmo6TvwwsBxolDL1
+My7EFEGbA4w6Ld0f+bEu+ZmCMGoDM7I+umaQmnMqKdbmYgxzV0DlMrdIPeARTV1F
+CTfZEWpnwUsbmIc3BMYowoArgLmVXWxtEFoOMzZF2SBNdIFI+7JEDx/84LlcSz73
+/NQp2d/N5ae3P/vRMz+Z9ji///T1hfcGr440O65sj5MVDzvGbp5nfe/39M56p1lf
+VOS7G10frgW48e/E50f8S4Pj9RkbCzu/rl38oRvfm/rVlL0/DnRfe/OvLXP27Vq9
+reyA4EH3/bbvl7634KOB2+HODVcaO1ZcSBZHq2c1l7z65WaVv3Fu6PXHenkhWXnu
+4zMDx+tBXbV1Nl/pefRWOP/k8C93TvY3/unadnNl6xbZFixrOA/fuHpryW8X573k
+9L9W7TjyYGzX7Im5m+Sjo+uCvXxZtOjG7sLSA6t+3VM5WPh5R2HeaPPTwfJ3X4zL
+kcuf/XFg7M/h37fe6k1mjG4/u/nvrafLQ8e+sfno0PjyF+aPtJ8Y/tZpfQLXWmDU
+=HSfY
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
@@ -66,4 +72,3 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/caipre
 
 ==================================================================
-
