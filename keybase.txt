@@ -72,3 +72,78 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/caipre
 
 ==================================================================
+
+==================================================================
+https://keybase.io/caipre
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://caipre.github.io
+  * I am caipre (https://keybase.io/caipre) on keybase.
+  * I have a public key with fingerprint 4CA8 A480 4465 5AC1 90CD  08EF 70DE 05AE 7A63 2BC6
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01018397086532489b5fddd0a55a9b02cd268ca2b57c5f4ad6825419ada2d1182b540a",
+            "fingerprint": "4ca8a48044655ac190cd08ef70de05ae7a632bc6",
+            "host": "keybase.io",
+            "key_id": "70de05ae7a632bc6",
+            "kid": "01018397086532489b5fddd0a55a9b02cd268ca2b57c5f4ad6825419ada2d1182b540a",
+            "uid": "c5320abad17154bd4af71b9695157f00",
+            "username": "caipre"
+        },
+        "revoke": {
+            "sig_ids": [
+                "897ab6d4f7c40f0d09dc394994213d53b07edc76a5b6937fea41d4ba86f17e990f"
+            ]
+        },
+        "service": {
+            "hostname": "caipre.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1462324619,
+    "expire_in": 157680000,
+    "prev": "001ea23d232a50c235f9f18a042c6b1ad6ca29f19a7dc79c792dae1069a573c8",
+    "seqno": 11,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.53
+Comment: https://keybase.io/crypto
+
+yMJsAnicrZJfaBRHHMcvbU5JRIxJmkIrFVdLVdLLzO7Mzs41GvVBUdqo4D8w5Zh/
+e9kmub3c7p1a60PEKP7FF4Mm1tD66IMIij5J4j+CxwWTknKUhpSGSv+AJW2ItLSl
+s2l9KPTRZWCZme/v8/vOd+bB4ldj1RXTNUc7V7Ve/bKiODyXj+1d88Hpwwb35SEj
+edjoUPM/1SlVEKY6PGkkDQABdCxKgGNjy0QO5diVUgKGMaMcmEKatiOYyTER2EVM
+2o6JEaRMMlNC6OgNBJjRaLheJq1y2ZyXCTUWCeYw5ACEbA0SkAIhgaNcAqQCmCnC
+bMvkwtaF7X4QVWhznAUq4fl6TU9S8/b+R/+SfefncUJDAONMQgIx4hIxl0BObYoh
+Ji4AkTBQuQzrUpGaedmcMo40GjlV8DtUlGrgpbXlwEjuNxxKGLclcolAwAUSUCks
+iihFJrQktjggSgpiM8xtahFXMQQl4syxXUgUpcA1PtRs3a/giXl4lNF/eifSXtie
+5/+klc35oS/8Tr3bHobZIBk5Cw9lI/kBxVP/glLcy0h9S7qioHKB52eMJNRKEXoR
+GSLb1EnakDYa6mDWy6mUFykwsR2gv6iPKkTRA6iYaUmtZhgI08IudaHDADKFzaGO
+WueuVygj+pRUD1MyBYFNGSaWcIzoaN0ZX7Oh9snSmqnTy7AwH4V6b6itMlZRHVsQ
+fyV6vrHqqpoXj3po68K/3m0tLpgtWouvfV2iv5DBoPfUsY/ODkxt/mNHqeeJP718
+vCddDLqeT/b/Wrmk6uH55MPRmdUrLn9fOzw4a9VaXyW+fXO27kzTjh/b7j69Wdu2
+aePcjU9vl1pLF/JdDUvD8sjEyOSfvfH1l95PzZw4983Exk/i3T33m7/47En5onVc
+nIgPZIbKzbefbYDvtbz9dOvmlYMT1p5HiZZ9i77bXTe1fcPYGzXeT/W7ComTl+4W
+tzR8PBCcXFTVdKbvt/u3uq9UHVzRu3a4ZbLe6Je/3xvrGF3W9+xCeXt29+O+dfvv
+9M+91t9cf/2HqzsLI3vK7W/N3Lz+zuh4ZakwfT7+eZ2zbenPr8cfjDT9DWPlXOc=
+=WVKI
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/caipre
+
+==================================================================
