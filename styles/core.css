@@ -1,74 +1,70 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css);
+
 @import url(/styles/fontello.css);
-@import url(https://fonts.googleapis.com/css?family=Catamaran:400&subset=latin);
+@import url(https://fonts.googleapis.com/css?family=Vollkorn:400,400italic);
 
 * { box-sizing: border-box; }
 
-body {
-   background-color: hsl(225, 7%, 8%);
-   color: hsl(225, 7%, 42%);
-   font: 400 3em/1em 'catamaran', sans-serif;
+html, body {
+   background-color: hsl(0, 0%, 99%);
+   color: hsl(0, 0%, 24%);
+   font: 1.1em/1.4em 'vollkorn', sans-serif;
    margin: 0;
    padding: 0;
 }
 
-body > div {
-   display: flex;
-   flex-flow: row wrap;
-   justify-content: center;
-   align-content: center;
+a, a:link, a:visited {
+   color: inherit;
+   text-decoration: none;
+}
+
+a:hover, a:active, .active {
+   color: hsl(230, 100%, 50%);
+}
+
+a, li[class^="icon-"]::before {
+   transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+
+.flex { display: flex; }
+.flex.col { flex-direction: column; }
+.tall { min-height: 100vh; }
+
+.container {
    margin: 0 auto;
-   max-width: 36em;
-   min-height: 100vh;
-   padding: 3em;
+   max-width: 49rem;
 }
 
-main, address {
-   flex: 1 100%;
+#intro .container { margin-top: 14rem; }
+
+#intro p {
+   font-size: 1.6rem;
+   line-height: 2.2rem;
+   margin: 0;
 }
 
-main {
-	font-size: 1.6em;
-   line-height: 1.2em;
-   margin-bottom: 1em;
+#intro .crossbeam {
+   background-color: hsl(230, 100%, 50%);
+   margin-bottom: 1.4rem;
+   margin-top: 4.8rem;
+   height: 0.25rem;
+   width: 7rem;
 }
 
-p { margin: 0; }
-
-em {
-   color: hsl(225, 7%, 73%);
-   font-style: normal;
+#intro address ul {
+   list-style: none;
+   margin: 0 2rem 0 0;
+   padding: 0;
 }
 
-address { display: flex; }
-
-address > ul {
-	border-top: 2px solid hsl(225, 7%, 20%);
-	font: normal 300 0.4em/1.2em "catamaran", sans-serif;
-	list-style: none;
-	margin: 0 2em 0 0;
-	padding: 1em 0.5em;
-   flex: 0 auto;
-}
-
-li[class^="icon-"]::before {
-   color: hsl(225, 7%, 40%);
-   margin: 0 0.5em 0.6em 0;
+#intro address li::before {
+   margin: 0 0.5rem 0.6rem 0;
 }
 
 .icon-book::before {
    position: relative;
    top: 0.1em;
-}
-
-a, a:link, a:visited {
-   color: hsl(225, 7%, 40%);
-   text-decoration: none;
-   transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-a:hover, a:active {
-   color: hsl(225, 7%, 73%);
-
 }
 
 @media screen and (max-width:48em) {

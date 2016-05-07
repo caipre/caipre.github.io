@@ -9,27 +9,24 @@
    </head>
 
    <body>
-      <div>
-         <main>
+      <div id="intro" class="flex col tall">
+         <div class="container">
             <p>
-               Hello there. I&#x2019;m <em>Nick Platt</em>, a systems level
-               <em>software engineer</em> interested in programming languages,
-               operating systems, databases, cryptography, and machine learning.
-               I&#x2019;m also an avid <em>traveler</em>, backpacker, and
-               cyclist.
+               Hello&#x2014;I&#x2019;m Nick Platt. I&#x2019;m a software engineer interested primarily in systems programming: compilers, operating systems, databases, and cryptography. I&#x2019;m also an avid traveler, backpacker, and cyclist.
             </p>
-         </main>
-         <address>
-            <ul>
-               <li class="icon-paper-plane"><a id="email"></a></li>
-               <li class="icon-book"><a href="/">view my portfolio</a></li>
-            </ul>
-            <ul>
-               <li class="icon-key"><a href="https://keybase.io/caipre">keybase.io/caipre</a></li>
-               <li class="icon-github"><a href="https://github.com/caipre">github.com/caipre</a></li>
-               <li class="icon-twitter"><a href="https://twitter.com/caipre_">twitter.com/caipre_</a></li>
-            </ul>
-         </address>
+            <div class="crossbeam"></div>
+            <address class="flex">
+               <ul>
+                  <li class="icon-paper-plane"><a id="email"></a></li>
+                  <li class="icon-book"><a href="/resume.pdf">view my r&#xe9;sum&#xe9;</a></li>
+               </ul>
+               <ul>
+                  <li class="icon-key"><a href="https://keybase.io/caipre">keybase.io/caipre</a></li>
+                  <li class="icon-github"><a href="https://github.com/caipre">github.com/caipre</a></li>
+                  <li class="icon-twitter"><a href="https://twitter.com/caipre_">twitter.com/caipre_</a></li>
+               </ul>
+            </address>
+         </div>
       </div>
    </body>
    <script type="text/javascript">
@@ -40,6 +37,11 @@
              addr = strs.join("@");
          elem.href="mailto:" + addr;
          elem.textContent = addr;
+
+         for (var elem of document.querySelectorAll("#intro address li a")) {
+            elem.addEventListener('mouseenter', function(e) { e.target.parentNode.classList.toggle("active"); });
+            elem.addEventListener('mouseleave', function(e) { e.target.parentNode.classList.toggle("active"); });
+         }
       });
    </script>
 </html>
