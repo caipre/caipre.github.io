@@ -8,7 +8,7 @@
 html, body {
    background-color: hsl(0, 0%, 99%);
    color: hsl(0, 0%, 24%);
-   font: 1.1em/1.4em 'vollkorn', sans-serif;
+   font: 1.1em/1.4em 'vollkorn', serif;
    margin: 0;
    padding: 0;
 }
@@ -31,12 +31,10 @@ a, li[class^="icon-"]::before {
 .flex.col { flex-direction: column; }
 .tall { min-height: 100vh; }
 
-.container {
-   margin: 0 auto;
-   max-width: 49rem;
+#intro .container {
+   margin: 14rem auto 0;
+   width: 49rem;
 }
-
-#intro .container { margin-top: 14rem; }
 
 #intro p {
    font-size: 1.6rem;
@@ -46,7 +44,7 @@ a, li[class^="icon-"]::before {
 
 #intro .crossbeam {
    background-color: hsl(230, 100%, 50%);
-   margin-bottom: 1.4rem;
+   margin-bottom: 0.4rem;
    margin-top: 4.8rem;
    height: 0.25rem;
    width: 7rem;
@@ -54,7 +52,7 @@ a, li[class^="icon-"]::before {
 
 #intro address ul {
    list-style: none;
-   margin: 0 2rem 0 0;
+   margin: 1rem 2rem 0 0;
    padding: 0;
 }
 
@@ -64,18 +62,29 @@ a, li[class^="icon-"]::before {
 
 .icon-book::before {
    position: relative;
-   top: 0.1em;
+   top: 0.1rem;
 }
 
-@media screen and (max-width:48em) {
-   body > div { padding: 0.6em; }
-   main { font-size: 0.5em; }
-   address { flex-flow: column; }
-   address > ul { margin: 0; }
+@media screen and (max-width:48rem) {
+   #intro.flex { justify-content: center; }
+
+   #intro .container {
+      margin: 1rem auto;
+      width: 16rem;
+   }
+   #intro p {
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+   }
+   #intro .crossbeam { margin-top: 3.8rem; }
+   address.flex { flex-direction: column; }
 }
 
-@media screen and (min-width:48em) and (max-width:64em) {
-   body > div { padding: 1em; }
-   main { font-size: 1em; }
-   address { flex-flow: row; }
+@media screen and (min-width:48rem) and (max-width:64rem) {
+   #intro.flex { justify-content: normal; }
+   #intro .container {
+      margin: 10rem auto 0;
+      width: 40rem;
+   }
+   address.flex { flex-direction: row; }
 }
