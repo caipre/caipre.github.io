@@ -28,21 +28,21 @@
             </address>
          </div>
       </div>
-   </body>
-   <script type="text/javascript">
-      window.onload = (function() {
-         // obfuscation ftw
-         var strs = ["hello", "moc.ttalp-kcin".split("").reverse().join("")],
-             elem = document.getElementById("email");
-             addr = strs.join("@");
-         elem.href="mailto:" + addr;
-         elem.textContent = addr;
+      <script type="text/javascript">
+         window.onload = (function() {
+            // obfuscation ftw
+            var strs = ["hello", "moc.ttalp-kcin".split("").reverse().join("")],
+               elem = document.getElementById("email");
+               addr = strs.join("@");
+            elem.href="mailto:" + addr;
+            elem.textContent = addr;
 
-         var fn = function(e) { e.target.parentNode.classList.toggle("active"); };
-         for (var elem of document.querySelectorAll("#intro address li a")) {
-            elem.addEventListener('mouseenter', fn);
-            elem.addEventListener('mouseleave', fn);
-         }
-      });
-   </script>
+            var fn = function(e) { e.target.parentNode.classList.toggle("active"); };
+            for (var elem of document.querySelectorAll("#intro address li a")) {
+               elem.addEventListener('mouseenter', fn);
+               elem.addEventListener('mouseleave', fn);
+            }
+         });
+      </script>
+   </body>
 </html>
