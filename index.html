@@ -38,9 +38,10 @@
          elem.href="mailto:" + addr;
          elem.textContent = addr;
 
+         var fn = function(e) { e.target.parentNode.classList.toggle("active"); };
          for (var elem of document.querySelectorAll("#intro address li a")) {
-            elem.addEventListener('mouseenter', function(e) { e.target.parentNode.classList.toggle("active"); });
-            elem.addEventListener('mouseleave', function(e) { e.target.parentNode.classList.toggle("active"); });
+            elem.addEventListener('mouseenter', fn);
+            elem.addEventListener('mouseleave', fn);
          }
       });
    </script>
