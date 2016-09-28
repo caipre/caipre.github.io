@@ -1,48 +1,33 @@
-<!doctype html>
-<html lang="en">
-   <head>
-      <title>Nick Platt</title>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="canonical" href="https://nick-platt.com">
-      <link rel="stylesheet" href="/styles/core.css" />
-   </head>
+---
+layout: default
+---
+<div id="intro">
+   <p>
+      Hello&#x2014;I&#x2019;m Nick Platt. I&#x2019;m a software engineer interested primarily in systems programming: compilers, operating systems, databases, and cryptography. I&#x2019;m also an avid traveler, backpacker, and cyclist.
+   </p>
+</div>
 
-   <body>
-      <div id="intro" class="flex col tall">
-         <div class="container">
-            <p>
-               Hello&#x2014;I&#x2019;m Nick Platt. I&#x2019;m a software engineer interested primarily in systems programming: compilers, operating systems, databases, and cryptography. I&#x2019;m also an avid traveler, backpacker, and cyclist.
-            </p>
-            <div class="crossbeam"></div>
-            <address class="flex">
-               <ul>
-                  <li class="icon-paper-plane"><a id="email"></a></li>
-                  <li class="icon-book"><a href="/resume.pdf">view my r&#xe9;sum&#xe9;</a></li>
-               </ul>
-               <ul>
-                  <li class="icon-key"><a href="https://keybase.io/caipre">keybase.io/caipre</a></li>
-                  <li class="icon-github"><a href="https://github.com/caipre">github.com/caipre</a></li>
-                  <li class="icon-twitter"><a href="https://twitter.com/caipre_">twitter.com/caipre_</a></li>
-               </ul>
-            </address>
-         </div>
-      </div>
-      <script type="text/javascript">
-         window.onload = (function() {
-            // obfuscation ftw
-            var strs = ["hello", "moc.ttalp-kcin".split("").reverse().join("")],
-               elem = document.getElementById("email");
-               addr = strs.join("@");
-            elem.href="mailto:" + addr;
-            elem.textContent = addr;
+<div id="contact">
+   <address>
+      <ul class="flex">
+         <li class="icon-paper-plane"><a id="email"></a></li>
+         <li class="icon-github"><a href="https://github.com/caipre">github.com/caipre</a></li>
+      </ul>
+   </address>
+   <script type="text/javascript">
+      window.onload = (function() {
+         // obfuscation ftw
+         var strs = ["hello", "moc.ttalp-kcin".split("").reverse().join("")],
+            elem = document.getElementById("email");
+            addr = strs.join("@");
+         elem.href="mailto:" + addr;
+         elem.textContent = addr;
 
-            var fn = function(e) { e.target.parentNode.classList.toggle("active"); };
-            for (var elem of document.querySelectorAll("#intro address li a")) {
-               elem.addEventListener('mouseenter', fn);
-               elem.addEventListener('mouseleave', fn);
-            }
-         });
-      </script>
-   </body>
-</html>
+         var fn = function(e) { e.target.parentNode.classList.toggle("active"); };
+         for (var elem of document.querySelectorAll("#contact address li a")) {
+            elem.addEventListener('mouseenter', fn);
+            elem.addEventListener('mouseleave', fn);
+         }
+      });
+   </script>
+</div>
