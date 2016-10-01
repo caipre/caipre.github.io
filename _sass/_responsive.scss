@@ -1,16 +1,24 @@
-// @media screen and (max-width:48rem) {
-//    #container > div:first-child {
-//       padding-top: 4rem;
-//    }
-//    #contact .flex {
-//       align-items: center;
-//       flex-direction: column;
-//    }
-// }
-
-// @media screen and (min-width:48rem) and (max-width:64rem) {
-//    #container > div:first-child {
-//       padding-top: 12rem;
-//    }
-//    .boxed { width: 40rem; }
-// }
+@media screen and (max-width:360px) {
+   #container > header { margin-bottom: $short-margin; }
+   #container > footer { margin-top: $short-margin; }
+   #container > section { margin: 0; text-align: center; }
+   #container > * { width: auto; }
+   #about {
+      hr { margin: $short-margin 0; }
+      header { display: none; }
+      address {
+         align-items: center;
+         flex-direction: column;
+         span + span { padding-left: 0; }
+      }
+   }
+   #posts {
+      time { display: block; }
+      li + li { margin-top: $short-margin; }
+   }
+   article {
+      p { line-height: 1.8rem; }
+      figure { margin: 0; }
+      figure pre { margin: 0; }
+   }
+}

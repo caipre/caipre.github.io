@@ -17,6 +17,10 @@ a:hover, a:active, .active {
    color: $primary-color;
 }
 
+figure.highlight {
+   overflow: scroll;
+}
+
 .flex { display: flex; }
 .flex.col { flex-direction: column; }
 .flex.center { align-items: center; }
@@ -28,6 +32,6 @@ a:hover, a:active, .active {
    margin-bottom: $standard-margin;
 }
 
-#container > * { width: 54rem; max-width: 95vw; }
-#container > section + section { margin-top: 4rem; }
+#container > * { width: 54rem; max-width: 80vw; }
+#container > section { margin: $standard-margin 0; }
 #container > footer { margin-top: auto; }
