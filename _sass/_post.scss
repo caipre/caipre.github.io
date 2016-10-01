@@ -1,0 +1,20 @@
+article {
+   h1 {
+      @extend .font-sans;
+   }
+   .meta {
+      @extend .font-sans;
+      color: $secondary-text-color;
+      margin-bottom: $standard-margin;
+   }
+
+   p {
+      line-height: 1.7rem;
+      margin: 1.4rem 0;
+
+      a, a:link, a:visited {
+         text-decoration: underline;
+      }
+   }
+
+}

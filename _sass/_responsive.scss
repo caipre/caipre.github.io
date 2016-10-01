@@ -1,17 +1,16 @@
-@media screen and (max-width:48rem) {
-   #container > div:first-child {
-      padding-top: 4rem;
-   }
-   .boxed { width: 16rem; }
-   #contact .flex {
-      align-items: center;
-      flex-direction: column;
-   }
-}
+// @media screen and (max-width:48rem) {
+//    #container > div:first-child {
+//       padding-top: 4rem;
+//    }
+//    #contact .flex {
+//       align-items: center;
+//       flex-direction: column;
+//    }
+// }
 
-@media screen and (min-width:48rem) and (max-width:64rem) {
-   #container > div:first-child {
-      padding-top: 12rem;
-   }
-   .boxed { width: 40rem; }
-}
+// @media screen and (min-width:48rem) and (max-width:64rem) {
+//    #container > div:first-child {
+//       padding-top: 12rem;
+//    }
+//    .boxed { width: 40rem; }
+// }

@@ -1,34 +1,51 @@
 ---
 layout: default
 ---
-<div id="intro">
-   <p>
-      Hello&#x2014;I&#x2019;m Nick Platt. I&#x2019;m a software engineer interested primarily in systems programming: compilers, operating systems, databases, and cryptography. I&#x2019;m also an avid traveler, backpacker, and cyclist.
-   </p>
-</div>
+         <section id="about">
+            <hr class="top" />
 
-<div id="contact">
-   <address>
-      <ul class="flex">
-         <li class="icon-paper-plane"><a id="email"></a></li>
-         <li class="icon-feather"><a href="/blog.html">blog</a>
-         <li class="icon-github"><a href="https://github.com/caipre">github.com/caipre</a></li>
-      </ul>
-   </address>
-   <script type="text/javascript">
-      window.onload = (function() {
-         // obfuscation ftw
-         var strs = ["hello", "moc.ttalp-kcin".split("").reverse().join("")],
-            elem = document.getElementById("email");
-            addr = strs.join("@");
-         elem.href="mailto:" + addr;
-         elem.textContent = addr;
+            <header>
+               I&#x2019;m a software engineer interested primarily in systems
+               programming: compilers, operating systems, databases, and
+               cryptography. I&#x2019;m also an avid traveler, backpacker, and
+               cyclist.
+            </header>
 
-         var fn = function(e) { e.target.parentNode.classList.toggle("active"); };
-         for (var elem of document.querySelectorAll("#contact address li a")) {
-            elem.addEventListener('mouseenter', fn);
-            elem.addEventListener('mouseleave', fn);
-         }
-      });
-   </script>
-</div>
+            <address class="flex">
+               <span class="icon-paper-plane"><a id="email"></a></span>
+               <span class="icon-github"><a href="https://github.com/caipre">github.com/caipre</a></span>
+            </address>
+            <script type="text/javascript">
+               window.onload = (function() {
+                  // obfuscation ftw
+                  var strs = ["hello", "moc.ttalp-kcin".split("").reverse().join("")],
+                     elem = document.getElementById("email");
+                     addr = strs.join("@");
+                  elem.href="mailto:" + addr;
+                  elem.textContent = addr;
+
+                  var fn = function(e) { e.target.parentNode.classList.toggle("active"); };
+                  for (var elem of document.querySelectorAll("address a")) {
+                     elem.addEventListener('mouseenter', fn);
+                     elem.addEventListener('mouseleave', fn);
+                  }
+               });
+            </script>
+
+            <hr class="bottom" />
+         </section>
+
+         <section id="posts">
+            <ul class="flex col">
+            {% for post in site.posts %}
+               <li class="post">
+                  <time datetime="{{post.date | date_to_xmlschema}}"
+                        title="{{post.date | date_to_xmlschema}}">
+                     {{post.date | date:"%B %e"}}</time>
+                  <a class="title" title="{{post.title}}"
+                     href="{{post.url}}">
+                     {{post.title}}</a>
+               </li>
+            {% endfor %}
+            </ul>
+         </section>

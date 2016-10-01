@@ -1,40 +1,56 @@
-.boxed {
-   margin: 0 auto;
-   width: 49rem;
-}
+#about {
+   hr {
+      background-color: rgba(0,0,0,0.04);
+      border: 0 solid rgba(0,0,0,0.1);
+      height: 6px;
+      margin: $standard-margin 0;
+   }
 
-#intro {
-   @extend .boxed;
+   hr.top { border-width: 0px 0 0 0; }
+   hr.bottom { border-width: 0 0 0px 0; }
 
-   p {
+   header {
       font-size: 1.6rem;
       line-height: 2.2rem;
-      margin: 0;
+      margin-bottom: 2rem;
+   }
+
+   address {
+      color: $secondary-text-color;
+
+      a, span[class^="icon-"]::before {
+         transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      span::before { margin-right: 0.5rem; }
+      span + span { padding-left: 2rem; }
    }
 }
 
-#contact {
-   @extend .boxed;
-
-   color: $secondary-text-color;
-
-   address {
-      ul {
-         list-style: none;
-         margin: 0;
-         padding: 0;
-      }
-
-      li {
-         padding-right: 2rem;
-      }
-
-      li::before {
-         margin: 0 0.5rem 0.6rem 0;
-      }
+#posts {
+   ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
    }
 
-   a, li[class^="icon-"]::before {
-      transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+   time {
+      color: $secondary-text-color;
+      display: inline-block;
+      font-family: $font-sans;
+      min-width: 7rem;
+   }
+}
+
+.post {
+   .meta {
+      padding-bottom: 2rem;
+      time { color: $secondary-text-color; }
+   }
+
+   p { line-height: 1.8; }
+   figure.highlight {
+      border-left: 4px solid rgba(0, 0, 0, 0.1);
+      padding-left: 1rem;
    }
 }

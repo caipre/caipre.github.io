@@ -12,13 +12,25 @@
       <meta name="MobileOptimized" content="320" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Vollkorn:400" rel="stylesheet">
+      {% comment %} <script type="text/javascript" src="http://livejs.com/live.js"></script> {% endcomment %}
+      <script type="text/javascript" src="/assets/js/live.js"></script>
       <link rel="stylesheet" href="/assets/css/core.css" />
    </head>
 
    <body>
 
-      <div id="container" class="flex col">
-         {{ content }}
+      <div id="container" class="flex col center">
+         <header>
+            <span><a href="/">{{ site.name }}</a>.</span>
+         </header>
+
+{{ content }}
+
+         <footer>
+            <small>balance</small>
+         </footer>
+
       </div>
 
    </body>

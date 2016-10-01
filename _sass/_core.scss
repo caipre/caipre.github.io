@@ -3,7 +3,7 @@
 html, body {
    background-color: $background-color;
    color: $primary-text-color;
-   font: 1.1em/1.4em 'vollkorn', serif;
+   font: 1.0em/1.4em $font-serif;
    margin: 0;
    padding: 0;
 }
@@ -17,22 +17,17 @@ a:hover, a:active, .active {
    color: $primary-color;
 }
 
-p + p {
-   // margin-bottom: 1rem;
-}
-
 .flex { display: flex; }
 .flex.col { flex-direction: column; }
+.flex.center { align-items: center; }
 
-code {
-   font-size: 0.8rem;
+#container { min-height: 100vh; padding: 2rem; }
+
+#container > header {
+   @extend .font-sans;
+   margin-bottom: $standard-margin;
 }
 
-#container > div {
-   padding: 4rem 0;
-}
-
-#container > div:first-child ,
-#container > main:first-child {
-   padding: 12rem 0 0;
-}
+#container > * { width: 54rem; max-width: 95vw; }
+#container > section + section { margin-top: 4rem; }
+#container > footer { margin-top: auto; }
