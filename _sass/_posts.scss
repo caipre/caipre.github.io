@@ -2,7 +2,6 @@
    @extend .boxed;
 
    .block { padding-bottom: 3rem; }
-   h1 { margin: 0; }
    time { color: $secondary-text-color; }
 }
 
@@ -19,6 +18,6 @@
    }
 }
 
-.content > * {
+main.content {
    @extend .boxed;
 }

@@ -17,8 +17,16 @@ a:hover, a:active, .active {
    color: $primary-color;
 }
 
+p + p {
+   // margin-bottom: 1rem;
+}
+
 .flex { display: flex; }
 .flex.col { flex-direction: column; }
+
+code {
+   font-size: 0.8rem;
+}
 
 #container > div {
    padding: 4rem 0;
