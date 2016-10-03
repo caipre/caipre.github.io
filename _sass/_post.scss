@@ -1,16 +1,16 @@
 article {
    h1 {
       @extend .font-sans;
+      margin-bottom: $short-margin;
    }
+
    .meta {
       @extend .font-sans;
       color: $secondary-text-color;
-      margin-bottom: 2rem;
+      margin-bottom: $standard-margin;
    }
 
    p {
-      line-height: 2em;
-
       a, a:link, a:visited {
          text-decoration: underline;
       }

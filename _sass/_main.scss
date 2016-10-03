@@ -1,11 +1,11 @@
-span[class^="icon-"]::before { margin-right: 0.5rem; }
+span[class^="icon-"]::before { margin-right: $short-margin; }
 
 #about {
    hr {
       background-color: rgba(0,0,0,0.04);
       border: 0 solid rgba(0,0,0,0.1);
       height: 6px;
-      margin: $standard-margin 0;
+      margin: $oversize-margin 0;
    }
 
    hr.top { border-width: 0px 0 0 0; }
@@ -14,7 +14,7 @@ span[class^="icon-"]::before { margin-right: 0.5rem; }
    header {
       font-size: 1.6rem;
       line-height: 2.2rem;
-      margin-bottom: 2rem;
+      margin-bottom: $standard-margin;
    }
 
    address {
@@ -30,7 +30,7 @@ span[class^="icon-"]::before { margin-right: 0.5rem; }
 
 #posts {
    header{
-      margin-bottom: $short-margin;
+      margin-bottom: $standard-margin;
    }
 
    ul {
