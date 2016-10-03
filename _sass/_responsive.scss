@@ -1,7 +1,7 @@
-@media screen and (max-width:360px) {
+@media screen and (max-width:768px) {
    #container > header { margin-bottom: $short-margin; }
    #container > footer { margin-top: $short-margin; }
-   #container > section { margin: 0; text-align: center; }
+   #container > section { margin: $standard-margin 0; text-align: center; }
    #container > * { width: auto; }
    #about {
       hr { margin: $short-margin 0; }
@@ -13,12 +13,15 @@
       }
    }
    #posts {
+      span[class^="icon-"]::before {
+         margin-left: -1.8rem;
+         margin-right: $short-margin;
+      }
       time { display: block; }
-      li + li { margin-top: $short-margin; }
+      li + li { margin-top: $standard-margin; }
    }
    article {
-      p { line-height: 1.8rem; }
-      figure { margin: 0; }
-      figure pre { margin: 0; }
+      figure { margin: 0; overflow: scroll; }
+      figure pre { margin: 0; font-size: 0.8rem; }
    }
 }

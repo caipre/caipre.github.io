@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Encrypt a password without ever storing the plaintext"
 date: "2016-09-30 21:53:59 -0400"
 ---

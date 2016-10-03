@@ -14,7 +14,6 @@ article {
       a, a:link, a:visited {
          text-decoration: underline;
       }
-
       code {
          background-color: rgba(0,0,0,0.03);
          border-radius: 4px;
@@ -23,5 +22,7 @@ article {
          padding: 0 4px;
       }
    }
+
+   figure { overflow: visible; }
 
 }
