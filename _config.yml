@@ -2,7 +2,7 @@ name: Nick Platt
 description: Notes from a systems software engineer
 meta_description: Notes from a systems software engineer
 
-baseurl: /
+url: 'https://nick-platt.com'
 
 sass:
   style: compressed
@@ -17,3 +17,4 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      is_post: true

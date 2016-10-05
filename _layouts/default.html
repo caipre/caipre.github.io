@@ -4,7 +4,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-      <title>{{ site.name }}{% if page.is_post %} &#x2014; {{ post.title }}{% endif %}</title>
+      <title>{% if page.is_post %}{{page.title}} &#x2014; {% endif %}{{site.name}}</title>
       <meta name="description" content="{{ site.meta_description}}" />
       <link rel="canonical" href="https://nick-platt.com">
       <link type="application/atom+xml" rel="alternate" href="/feed.xml">
@@ -29,7 +29,9 @@
 {{ content }}
 
          <footer>
-            <small></small>
+{% if page.is_post %}
+{% include disqus.html %}
+{% endif %}
          </footer>
 
       </div>
