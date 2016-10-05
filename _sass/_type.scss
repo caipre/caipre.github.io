@@ -1,9 +1,14 @@
-h1 { line-height: 2rem; }
+h1, h2, h3 {
+   margin: $oversize-margin 0 0;
+   line-height: 2rem;
+}
+
+h2, h3 { font-family: $font-sans; }
+
 .font-sans {
    font-family: $font-sans;
 }
 
-small {
-   color: $secondary-text-color;
-   font-size: 0.8rem;
+code {
+   font-size: 80%;
 }
