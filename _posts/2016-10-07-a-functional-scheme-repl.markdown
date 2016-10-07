@@ -7,8 +7,8 @@ I've just finished the [*Write Yourself a Scheme in 48 Hours*][wikibook]
 wikibook, implementing a basic REPL and stdlib for Scheme using Haskell and
 Parsec. You can browse the code [on my GitHub][hume]; it's only some 500 lines.
 
-Having completed it, I wouldn't recommend the book to another beginner as a
-means of learning Haskell. The lessons spend too much time dictating code
+Having completed it, though, I wouldn't recommend the book to another beginner
+as a means of learning Haskell. The lessons spend too much time dictating code
 without providing any background for *why* it's being done that way. Despite
 claiming to be written for people interested in learning Haskell, the book
 mostly assumes familiarity with central concepts such as monads and typeclasses.
@@ -36,14 +36,15 @@ Highlights of the book include going from `eval args` to REPL in just a few
 lines, adding support for variables, functions, and lambdas, and the discussion
 of `foldr` versus `foldl` when implementing `stdlib.scm`.
 
-Where next to learn Haskell? The author of the forthcoming book [*Haskell
-Programming from First Principles*][haskellbook] discusses and reviews many of
-the available resources at length in [Functional Education][funcedu]. I've also
-thought about trying to modernize the code I wrote for the Scheme interpreter,
-possibly updating the wikibook afterwards. At the moment, though, I'm most
-interested in beginning an LLVM tutorial that implements a toy language named
-Kaleidoscope. The tutorial is written using OCaml, a language not too unlike
-Haskell; translating their implementation seems like a worthwhile exercise.
+Where next to continue learnng Haskell? Christopher Allen, the author of the
+forthcoming book [*Haskell Programming from First Principles*][haskellbook]
+discusses and reviews at length many of the resources available in [Functional
+Education][funcedu]. I've also thought about trying to modernize the code I
+wrote for the Scheme interpreter, possibly updating the wikibook afterwards. At
+the moment, though, I'm most interested in beginning an LLVM tutorial that
+implements a toy language named Kaleidoscope. The tutorial is written using
+OCaml, a language not too unlike Haskell, and translating their implementation
+seems like a worthwhile exercise.
 
 
 [wikibook]: https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours
