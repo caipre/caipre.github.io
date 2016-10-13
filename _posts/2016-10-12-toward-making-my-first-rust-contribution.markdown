@@ -2,6 +2,7 @@
 title: "Toward Making My First Rust Contribution"
 date: "2016-10-12 16:53:21 -0400"
 updated: "2016-10-13T10:18:32-04:00"
+tags: [rust]
 ---
 
 Rust is a modern systems programming language from Mozilla that focuses on
@@ -86,7 +87,7 @@ code naturally. Vim tip: `ctrl-o` will move to the previous point in the jump
 stack, `ctrl-i` will move forward. Since `racer` doesn't operate on the tag
 stack, the usual `ctrl-t` binding won't work.
 
-**Using a debuggers**
+**Using debuggers**
 
 The most important piece for working with a debugger is ensuring that the
 `--enable-debug` flag passed during the build step above. Unlike default builds
