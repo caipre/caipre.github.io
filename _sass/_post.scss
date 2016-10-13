@@ -10,11 +10,12 @@ article {
       margin-bottom: $standard-margin;
    }
 
+   a, a:link, a:visited {
+      color: $primary-color;
+      text-decoration: underline;
+   }
+
    p {
-      a, a:link, a:visited {
-         color: $primary-color;
-         text-decoration: underline;
-      }
       code {
          background-color: rgba(0,0,0,0.03);
          border-radius: 4px;
