@@ -13,7 +13,7 @@ layout: default
                      <time datetime="{{page.date | date_to_xmlschema}}"
                            title="{{page.date | date_to_xmlschema}}">
                         {{page.date | date: "%B %e, %Y"}}</time>
-                     {% if page.tags.length > 0 %} in
+                     {% if page.tags.size > 0 %} in
                         {{page.tags | join: ', '}}
                      {% endif %}
                      {% if page.updated %}
