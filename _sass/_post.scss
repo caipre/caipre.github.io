@@ -8,6 +8,12 @@ article {
       @extend .font-sans;
       color: $secondary-text-color;
       margin-bottom: $standard-margin;
+
+      .updated {
+         font-size: 80%;
+         font-style: italic;
+         padding-left: $short-margin;
+      }
    }
 
    a, a:link, a:visited {

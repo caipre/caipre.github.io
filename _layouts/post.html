@@ -16,6 +16,12 @@ layout: default
                      {% if page.tags.length > 0 %} in
                         {{page.tags | join: ', '}}
                      {% endif %}
+                     {% if page.updated %}
+                     <span class="updated">(updated
+                     <time datetime="{{page.updated | date_to_xmlschema}}"
+                           title="{{page.updated | date_to_xmlschema}}">
+                           {{page.updated | date: "%B %e, %Y"}}</time>)</span>
+                     {% endif %}
                   </div>
                </header>
 

@@ -1,6 +1,7 @@
 ---
 title: "Toward Making My First Rust Contribution"
 date: "2016-10-12 16:53:21 -0400"
+updated: "2016-10-13T10:18:32-04:00"
 ---
 
 Rust is a modern systems programming language from Mozilla that focuses on
@@ -63,6 +64,11 @@ $ make x86_64-apple-darwin/stage1/bin/rustc
 You should replace `x86_64-apple-darwin` with the appropriate target-triple for
 your platform. Alternatively, you can `make rustc-stage1`. I'd love to know
 whether these are equivalent!
+
+*Edit:* The two targets are in fact distinct, and the latter is the correct
+choice. Building just `rustc` leaves out the standard libraries, which are
+required when running the various tests (either by `make check` or directly, eg,
+`./x86_64-apple-darwin/stage1/bin/rustc ./src/test/compile-fail/...`).
 
 **About `ctags` knowing nothing about `rustc`**
 
