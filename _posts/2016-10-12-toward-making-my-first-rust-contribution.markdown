@@ -86,7 +86,7 @@ code naturally. Vim tip: `ctrl-o` will move to the previous point in the jump
 stack, `ctrl-i` will move forward. Since `racer` doesn't operate on the tag
 stack, the usual `ctrl-t` binding won't work.
 
-**Using a debuggers**
+**Using debuggers**
 
 The most important piece for working with a debugger is ensuring that the
 `--enable-debug` flag passed during the build step above. Unlike default builds
