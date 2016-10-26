@@ -13,7 +13,7 @@ was quickly drawn into the group and excited by the new project.
 In this first meeting, we (the "Raft Implementers club") reviewed the paper's
 proof of safety in log replication. The others had read the paper prior to the
 meeting and talked about various points of confusion. The others were planning
-to write implementations alternatively in Go, Julia, Haskell, and Elixer. I
+to write implementations alternatively in Go, Julia, Haskell, and Elixir. I
 decided that I would have a go at implementing the algorithm as well, using
 Rust. That night, on the train home (and extending to the morning commute), I
 read the paper describing Raft and familiarized myself with the various rules.
