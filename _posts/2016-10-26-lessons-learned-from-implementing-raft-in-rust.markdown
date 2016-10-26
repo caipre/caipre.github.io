@@ -4,19 +4,20 @@ date: "2016-10-26 10:47:59 -0400"
 ---
 
 A little more than a week ago, while I was working on [my toy OS project][mezzo]
-in one of the Recurse Center's the side rooms, a few other Recursers entered the
+in one of the Recurse Center's side rooms, a few other Recursers entered the
 room to discuss a shared effort toward implementing the Raft consensus
 algorithm. The discussion immediately caught my attention: I knew vaguely about
-the Raft algorithm, and distributed systems are of particular interest to me. I
-was quickly drawn into the group and excited by the new project.
+Raft, and distributed systems are of particular interest to me. I was quickly
+drawn into the group and excited by the new project.
 
 In this first meeting, we (the "Raft Implementers club") reviewed the paper's
 proof of safety in log replication. The others had read the paper prior to the
-meeting and talked about various points of confusion. The others were planning
-to write implementations alternatively in Go, Julia, Haskell, and Elixir. I
-decided that I would have a go at implementing the algorithm as well, using
-Rust. That night, on the train home (and extending to the morning commute), I
-read the paper describing Raft and familiarized myself with the various rules.
+meeting and talked about various points of confusion. They were planning to
+write implementations alternatively in Go, Julia, Haskell, and Elixir. I decided
+that I would have a go at implementing the algorithm as well, using Rust. That
+night, on the train home (and extending to the morning commute), I read the
+paper describing the Raft protocol and familiarized myself with the various
+rules.
 
 ### raft.rs
 
@@ -27,19 +28,19 @@ Remaining work on the core algorithm includes accepting client commands and
 tracking peer log indices. I also need to replace the message serialization
 method with Protobuf; currently I'm simply encoding/decoding via colon-delimited
 plaintext strings. I'd also like to move to finer grained locking: presently
-there is one lock protecting the server's whole state. It should be possible to
-answer read-only requests concurrently with a read/write lock.
+there is one lock protecting the server's whole internal state. It should be
+possible to answer read-only requests concurrently with a read/write lock.
 
 Besides the fun of implementing the algorithm, this was a great growth exercise
 as a Rust programmer. It used to be the case that I would write a bit of code
 and run `cargo check` to learn about any borrowck or lifetime issues. After a
 few days on this project, though, I was able to recognize and reason out such
 problems while structuring the code. My first and second attempts mired in
-deciding how to structure the code to satisfy the algorithm: how to represent
-messages, timers, state, and object relationships. In my third attempt, having
-resolved these design choices and learned to reason out ownership, I wrote the
-majority of the program without ever running it through the borrow checker.
-That's an immensely satisfying position!
+deciding how to architect the system to satisfy the algorithm: how to represent
+messages, timers, state, and object relationships. By my third attempt, having
+resolved these design choices and learned to reason out ownership, I was able to
+write outthe majority of the program without ever running it through the borrow
+checker. That's an immensely satisfying position!
 
 ### Takeaways from Rust
 
@@ -53,9 +54,8 @@ Here are a few things I've learned so far by working on this project:
 
 * Writing a macro isn't nearly as hard as I thought, and they're even more
   useful than I imagined. I used macros to reduce [boilerplate][] and as a
-  convenience for [building relatively][heartbeat] structures. I was pleasantly
-  surprised to find [a similar pattern][implfrom] in use in the standard
-  library.
+  convenience for [building structures][heartbeat]. I was pleasantly surprised
+  to find [a similar pattern][implfrom] in use in the standard library.
 
 * A `'static` lifetime parameter doesn't mean what I thought: I thought it
   required that the value must exist for the entire program, from initialization
@@ -65,7 +65,7 @@ Here are a few things I've learned so far by working on this project:
   agree with my original understanding. It may be that my confusion arises
   because lifetimes can be considered from the perspective of the value (which
   has a particular lifetime) or from the perspective of the item acting on the
-  value (and describes a maximum lifetime bound).
+  value (which describes a maximum lifetime bound).
 
 * Working with dynamically typed data structures is a bit of a pain. Raft has
   three message types, each of which consists of a request/response part. I
@@ -75,7 +75,7 @@ Here are a few things I've learned so far by working on this project:
   possible to use `match` patterns on such a type due to monomophization. In
   fact, the more general problem of using `enum` variants as types is a
   long-standing feature request and is properly called [refinement
-  types][refinementtype]. For now I'm using separate `enum`s for each of the
+  types][refinementtype]. For now, I'm using separate `enum`s for each of the
   message [type][xtype], [part][xpart], and [data][msgdata]. The latter `enum`
   wraps the `structs` themselves so that I can use pattern matching to
   destructure the message and access the data.
@@ -87,7 +87,7 @@ Here are a few things I've learned so far by working on this project:
 * Locking plays nice with Rust's borrowck guarantees. A handful of various types
   available in `std::sync` provide a `get_mut` method that ensures read/write
   and thread-safety *statically*. This means that using this method to acquire
-  the `RwLock` my protecting my server state is effectively a no-op: the
+  the `RwLock` protecting my server state is effectively a no-op: the
   compiler's guarantees are just as strong as the lock's. That's awesome.
 
 * Properly done, a type system is absolutely amazing. When I dabbled in Haskell
