@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: caipre/caipre.github.io
 
 publish_mode: editorial_workflow
 media_folder: images/uploads
