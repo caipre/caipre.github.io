@@ -1,7 +1,6 @@
 ---
-title: "Toward Making My First Rust Contribution"
-date: "2016-10-12 16:53:21 -0400"
-updated: "2016-10-13T10:18:32-04:00"
+title: Toward Making My First Rust Contribution
+date: 2016-10-13T21:53:21.000Z
 ---
 
 Rust is a modern systems programming language from Mozilla that focuses on

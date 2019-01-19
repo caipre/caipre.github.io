@@ -1,6 +1,6 @@
 ---
-title: "Inspecting Rust values using `rust-gdb`"
-date: "2016-10-29 14:29:47 -0400"
+title: Inspecting Rust values using `rust-gdb`
+date: 2016-10-29T19:29:47.000Z
 ---
 
 In Rust, `Rc<T>` will auto-deref into `T` because `Rc` implements the `Deref`

@@ -1,6 +1,6 @@
 ---
-title: "First steps with Haskell"
-date: "2016-10-05 16:54:01 -0400"
+title: First steps with Haskell
+date: 2016-10-05T21:54:01.000Z
 ---
 
 A few days ago I started working through the [*Write Yourself a Scheme in 48

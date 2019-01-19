@@ -1,6 +1,6 @@
 ---
-title: "A functional Scheme REPL in 500 lines of Haskell"
-date: "2016-10-07 17:15:17 -0400"
+title: A functional Scheme REPL in 500 lines of Haskell
+date: 2016-10-07T17:20:17.000Z
 ---
 
 I've just finished the [*Write Yourself a Scheme in 48 Hours*][wikibook]

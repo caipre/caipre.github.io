@@ -1,6 +1,6 @@
 ---
-title: "Lessons learned from implementing Raft in Rust"
-date: "2016-10-26 10:47:59 -0400"
+title: Lessons learned from implementing Raft in Rust
+date: 2016-10-26T15:47:59.000Z
 ---
 
 A little more than a week ago, while I was working on [my toy OS project][mezzo]
