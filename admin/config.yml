@@ -7,7 +7,7 @@ media_folder: images/uploads
 
 collections:
 - name: post
-  label: Posts
+  label: Post
   folder: _posts/
   create: true
   slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
