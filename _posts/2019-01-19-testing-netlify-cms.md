@@ -7,9 +7,7 @@ tags:
 ---
 \# Markdown
 
-
-
-\`\``javascript
+\`\``
 
 async function () {\
 }
