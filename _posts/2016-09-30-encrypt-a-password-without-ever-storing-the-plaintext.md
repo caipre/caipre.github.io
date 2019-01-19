@@ -1,6 +1,6 @@
 ---
 title: Encrypt a password without ever storing the plaintext
-date: 2016-09-30T25:53:59.000Z
+date: 2016-09-30T23:53:59.000Z
 ---
 
 The advice in [this article][] is still largely correct, but I wanted to avoid
