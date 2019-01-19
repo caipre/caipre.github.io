@@ -1,7 +1,6 @@
 backend:
   name: github
   repo: caipre/caipre.github.io
-  site_domain: loving-stonebraker-413f1e.netlify.com
 
 publish_mode: editorial_workflow
 media_folder: images/uploads
