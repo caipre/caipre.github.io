@@ -14,19 +14,15 @@ collections:
   editor:
     preview: false
   fields:
-  - label: Layout
-    name: layout
-    widget: hidden
-    default: post
   - label: Title
     name: title
     widget: string
   - label: Publish Date
     name: date
     widget: date
-  - label: Tags
-    name: tags
-    widget: list
   - label: Body
     name: body
     widget: markdown
+  - label: Tags
+    name: tags
+    widget: list
