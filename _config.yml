@@ -7,7 +7,7 @@ url: 'https://nick-platt.com'
 sass:
   style: compressed
 
-gems:
+plugins:
   - jekyll-feed
 
 defaults:
