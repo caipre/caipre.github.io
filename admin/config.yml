@@ -6,8 +6,8 @@ publish_mode: editorial_workflow
 media_folder: images/uploads
 
 collections:
-- name: blog
-  label: Blog
+- name: post
+  label: Post
   folder: _posts/
   create: true
   slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -23,7 +23,7 @@ collections:
     widget: string
   - label: Publish Date
     name: date
-    widget: datetime
+    widget: date
   - label: Tags
     name: tags
     widget: list
