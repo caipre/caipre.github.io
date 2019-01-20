@@ -43,7 +43,7 @@ There are plenty of Haskell concepts that I'm still learning.
 As far as I understand them, typeclasses in Haskell are analogous to Rust's
 `trait`s. For example, the following Haskell:
 
-{% highlight haskell %}
+```haskell
 class Eq a where
    (==) :: a -> a -> Bool
 
@@ -52,11 +52,11 @@ data Foo = String
 eqFoo a b = a == b
 
 instance Eq Foo where (==) = eqFoo
-{% endhighlight %}
+```
 
 ...translates roughly to Rust as:
 
-{% highlight rust %}
+```rust
 trait Eq {
    fn eq(a, b) -> Bool;
 }
@@ -68,7 +68,7 @@ impl Eq for Foo {
       self.0 == other.0
    }
 }
-{% endhighlight %}
+```
 
 I don't know how/if Haskell has a concept of [trait objects]. I also don't know
 much about Haskell's support for generics, at least in the Rust sense (ie, `<T>`).
@@ -76,19 +76,19 @@ much about Haskell's support for generics, at least in the Rust sense (ie, `<T>`
 Haskell seems to be able to constrain types, but I don't grok the syntax yet.
 In Rust, I can write the following:
 
-{% highlight rust %}
+```rust
 fn myfunc<T: Display>(str: T) {
    println!("{}", str)
 }
 
-{% endhighlight %}
+```
 
 For Haskell, I think it's something like this:
 
-{% highlight haskell %}
+```haskell
 myfunc :: Show str => str -> String
 myfunc str = show str
-{% endhighlight %}
+```
 
 I might revisit the comparison between these languages as I get more
 comfortable with each.
@@ -111,19 +111,20 @@ This "action, extra work, forward" cycle is hidden by the `do` notation, so it's
 useful to know how to desugar the syntax. Consider the following Haskell code,
 which implements the evaluation of an `if` statement in Scheme:
 
-{% highlight haskell %}
+```haskell
 eval env (List [Atom "if", pred, conseq, alt]) =
    do result <- eval env pred
       case result of
          Bool False -> eval env alt
          otherwise -> eval env conseq
-{% endhighlight %}
+```
 
 We can desugar the `do` to:
-{% highlight haskell %}
+
+```haskell
 eval env (List [Atom "if", pred, conseq, alt]) =
    eval env pred >>= \result -> case result of ...
-{% endhighlight %}
+```
 
 Essentially, `>>` can be pronounced as "and then ...", while `>>=` can be
 pronounced as "and forward the result to ...".

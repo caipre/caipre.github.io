@@ -11,16 +11,16 @@ characters. For `zsh`, another flag (`-e`) will forward the bytes to `stdout`.
 Curiously though, that flag is ignored when `stdout` is connected to a pipe.
 Solution: use a subprocess. Thus, for `zsh`:
 
-{% highlight shell %}
+```terminal
 $ (read -s -e) | gpg --encrypt -r <your id> > pw.gpg
-{% endhighlight %}
+```
 
 Since `bash` doesn't support the `-e` flag, we just wrap the whole pipeline in a
 subprocess to prevent the variable from living past the scope of the command:
 
-{% highlight shell %}
+```terminal
 $ (read -s pw && echo "set my_password = $pw" | gpg --encrypt -r <your id> > pw.gpg)
-{% endhighlight %}
+```
 
 And there you have it: a `gpg` password file, and no plaintext was ever written
 to disk.

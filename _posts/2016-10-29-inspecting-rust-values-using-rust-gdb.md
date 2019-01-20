@@ -1,5 +1,5 @@
 ---
-title: Inspecting Rust values using `rust-gdb`
+title: Inspecting Rust values with rust-gdb
 date: 2016-10-29T19:29:47.000Z
 ---
 
@@ -16,7 +16,7 @@ type `Rc<cmt>` . A `cmt` is [a structure][cmt] that describes the category,
 mutability, and type of a node within the AST. Enclosed within the `Rc` type, it
 looks like this in `rust-lldb` (indentation added):
 
-{% highlight shell %}
+```
 (lldb) p cmt
 (alloc::rc::Rc<rustc::middle::mem_categorization::cmt_>) $1 = Rc<rustc::middle::mem_categorization::cmt_> {
    ptr: Shared<alloc::rc::RcBox<rustc::middle::mem_categorization::cmt_>> {
@@ -24,7 +24,7 @@ looks like this in `rust-lldb` (indentation added):
       _marker: PhantomData<alloc::rc::RcBox<rustc::middle::mem_categorization::cmt_>>
    }
 }
-{% endhighlight %}
+```
 
 There are a few more layers here than I expected. `Rc` has a field `ptr` of type
 `Shared`, which itself has a field `pointer` of type `NonZero`. This latter type
@@ -34,12 +34,12 @@ will never be null. This can allow for non-null pointer optimizations.
 Unfortunately, it's a roadblock when trying to get access to the interior data
 from a debugger:
 
-{% highlight shell %}
+```
 (lldb) p cmt.ptr.pointer.0
 (double) $2 = 0
   Fix-it applied, fixed expression was:
     cmt.ptr.pointer;.0
-{% endhighlight %}
+```
 
 This is because `lldb` doesn't understand Rust syntax, and instead tries parsing
 the expression as though it were C++ code. That's too bad for us: C++ doesn't
@@ -47,12 +47,12 @@ have Rust's concept of tuple-structs, so we can't access the data inside
 `NonZero(T)`. For reasons I don't understand, `lldb` won't let you cast away
 the `NonZero` and isn't even able to locate the `RcBox` type in a cast:
 
-{% highlight shell %}
+```
 (lldb) p (alloc::rc::RcBox<rustc::middle::mem_categorization::cmt_>*) cmt.ptr.pointer
 error: no member named 'RcBox' in namespace 'alloc::rc'
 error: expected '(' for function-style cast or type construction
 error: expected expression
-{% endhighlight %}
+```
 
 We need some way to access the data held by the tuple-struct, but `lldb` doesn't
 even know what a tuple-struct is. I've not been able to get past this with
@@ -63,10 +63,10 @@ even know what a tuple-struct is. I've not been able to get past this with
 Fortunately, `gdb` recently [announced support][gdbrust] for Rust. Let's try to
 access the data contained by the `NonZero` using `rust-gdb`:
 
-{% highlight shell %}
+```
 (gdb) p cmt.ptr.pointer.0
 $29 = (alloc::rc::RcBox<rustc::middle::mem_categorization::cmt_> *) 0x7fffe4122a50
-{% endhighlight %}
+```
 
 Nice!
 
@@ -77,7 +77,7 @@ auto-deref logic makes the `Rc` part transparent to any consumers of the API.
 
 So what does the `RcBox<cmt_>` look like then?
 
-{% highlight shell %}
+```
 (gdb) p *cmt.ptr.pointer.0
 $30 = RcBox<rustc::middle::mem_categorization::cmt_> = {
   strong = Cell<usize> = {
@@ -108,7 +108,7 @@ $30 = RcBox<rustc::middle::mem_categorization::cmt_> = {
     note = rustc::middle::mem_categorization::Note::NoteNone
   }
 }
-{% endhighlight %}
+```
 
 Our stack-based `Rc<T>` structure references a corresponding heap-based
 `RcBox<T>` structure; the `strong` and `weak` fields are there to break circular
@@ -122,7 +122,7 @@ printing its fields? The reason is that `rustc::ty::Ty` [is an alias][tyalias]
 for an `&rustc::ty::TyS`. We can see the data with a cast, but we need to help
 `gdb` a bit with the namespacing:
 
-{% highlight shell %}
+```
 (gdb) p *(*cmt.ptr.pointer.0).value.ty as extern rustc::ty::TyS
 $32 = TyS = {
   sty = TyAdt = {0x7fffe40323d0, 0x1},
@@ -135,7 +135,7 @@ $32 = TyS = {
   },
   region_depth = 0
 }
-{% endhighlight %}
+```
 
 The `extern ...` keyword is required to inform `gdb` that the namespace should
 be taken from root rather than the current crate.
@@ -157,9 +157,9 @@ until recently, and they can be quite useful given the limited debugger support
 Rust has. An example that enables `debug` level logs within a module under the
 borrow checker:
 
-{% highlight shell %}
+```
 $ RUST_LOG=rustc_borrowck::borrowck::gather_loans=debug ./x86_64-apple-darwin/stage1/bin/rustc ...
-{% endhighlight %}
+```
 
 See the [`env_logger`][envlogger] documentation for full details.
 

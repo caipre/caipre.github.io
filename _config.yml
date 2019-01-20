@@ -10,8 +10,10 @@ sass:
 
 markdown: kramdown
 plugins:
+- jekyll-avatar
 - jekyll-feed
 - jekyll-seo-tag
+- jemoji
 
 defaults:
 - scope:

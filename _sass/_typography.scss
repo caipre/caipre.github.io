@@ -1,121 +1,108 @@
-html, .root {
-   font-size: 18px;
-}
+@import url('https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:400|Alegreya|Alegreya+Sans|Catamaran|Merriweather|Noto+Sans|Work+Sans|Amiri|Rosario:400,700|Montserrat|Merriweather+Sans|Open+Sans:400,700|Lora|Fira+Sans');
 
-$heading: 'Amiri', serif;
-$serif: 'Lora', serif;
-$sans: 'Fira Sans', sans-serif;
+$mast: 'source sans pro', sans-serif;
+$body: 'source sans pro', sans-serif;
 
-$base: hsl(0, 0%, 12%);
-$primary: hsl(142, 25%, 58%);
+$color: hsl(0, 0%, 20%);
+$primary: hsl(220, 100%, 58%);
+
 $lightgrey: hsl(0, 0%, 90%);
-$darkgrey: hsl(0, 0%, 50%);
 
-body, .article {
-   color: $base;
-   font-family: $serif;
-   font-size: 1rem;
-   line-height: 1.625rem;
-   text-rendering: optimizeLegibility;
+html { font-size: 20px; }
+
+body {
+  color: $color;
+  font-family: $body;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  text-rendering: optimizeLegibility;
 }
 
-h1, .h1 {
-   font-family: $heading;
-   font-size: 2rem;
-   font-weight: normal;
-   line-height: 2rem;
-   margin-top: 1.625rem;
-   margin-bottom: 3.25rem;
+a:link, a:visited {
+  color: darken($primary, 10%);
+  text-decoration: none;
 }
 
-h1 + h4 {
-   margin-top: -3rem;
-   margin-bottom: 3.25rem;
-   font-family: $sans;
-   font-weight: normal;
-   color: $darkgrey;
+a:active, a:hover {
+  color: $primary !important;
+  text-decoration: underline;
 }
 
-h2, .h2 {
-   font-family: $heading;
-   font-size: 1.625rem;
-   line-height: 1.625rem;
-   margin-top: 1.625rem;
-   margin-bottom: 1.625rem;
+h1 {
+  font-family: $mast;
+  line-height: 2.5rem;
+  margin-top: 1.625rem;
+  margin-bottom: 3.25rem;
 }
 
-h3, .h3 {
-   font-family: $heading;
-   font-size: 1.25rem;
-   line-height: 1.625rem;
-   margin-top: 1.625rem;
-   margin-bottom: 0rem;
+h1 + div.meta {
+  margin-top: -3rem;
+  margin-bottom: 2em;
 }
 
-h4, .h4 {
-   font-family: $heading;
-   font-size: 1rem;
-   line-height: 1.625rem;
-   margin-top: 1.625rem;
-   margin-bottom: 0rem;
+h2 {
+  font-size: 1.625rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-h5, .h5 {
-   font-family: $heading;
-   font-size: 1rem;
-   line-height: 1.625rem;
-   margin-top: 1.625rem;
-   margin-bottom: 0rem;
+h3 {
+  font-size: 1.15rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 p, ul, ol, pre, table, blockquote {
-   margin-top: 0rem;
-   margin-bottom: 1.625rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
 }
 
 ul ul, ol ol, ul ol, ol ul {
-   margin-top: 0rem;
-   margin-bottom: 0rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-hr, .hr {
-   border: 0;
-   background-color: $lightgrey;
-   height: 6px;
-   margin: 1.25rem 0;
+hr {
+  border: 0;
+  background-color: $lightgrey;
+  height: 6px;
+  margin: 1.25rem 0;
 }
 
 a, b, i, strong, em, small, code {
 }
 
 pre {
-   border-left: 6px solid $lightgrey;
-   border-radius: 6px;
-   line-height: 1rem;
-   overflow-x: scroll;
-   padding: 1rem;
+  line-height: 1rem;
+  margin-left: 0.8rem;
+  overflow-x: scroll;
 }
 
 code {
-   font-size: 0.9em;
-   vertical-align: middle;
-}
-
-a {
-   color: $primary;
-   //color: darken($primary, 10%);
+  color: hsl(0, 0%, 30%);
+  font-size: 0.8em;
+  vertical-align: middle;
 }
 
 sub, sup {
-   line-height: 0;
-   position: relative;
-   vertical-align: baseline;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sup {
-   top: -0.5em;
+  top: -0.5em;
 }
 
 sub {
-   bottom: -0.25em;
+  bottom: -0.25em;
 }

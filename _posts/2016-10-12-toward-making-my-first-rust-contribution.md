@@ -43,7 +43,7 @@ distressing:
 
 ## What I've Learned So Far
 
-**How to build `rustc`**
+### How to build `rustc`
 
 Answering the last question first, there are currently two build systems for
 `rustc`: the standard `make` based system, and the newer `rustbuild` system. My
@@ -55,10 +55,10 @@ For my purposes (working on `rustc`, rather than anything in the standard
 library), I don't need to build all the [stages of the compiler][rustcstages].
 Hence, I build my `rustc` with the following options:
 
-{% highlight shell %}
+```terminal
 $ ./configure --enable-ccache --enable-debug --enable-clang --enable-fast-make
 $ make x86_64-apple-darwin/stage1/bin/rustc
-{% endhighlight %}
+```
 
 You should replace `x86_64-apple-darwin` with the appropriate target-triple for
 your platform. Alternatively, you can `make rustc-stage1`. I'd love to know
@@ -69,15 +69,15 @@ choice. Building just `rustc` leaves out the standard libraries, which are
 required when running the various tests (either by `make check` or directly, eg,
 `./x86_64-apple-darwin/stage1/bin/rustc ./src/test/compile-fail/...`).
 
-**About `ctags` knowing nothing about `rustc`**
+### About `ctags` knowing nothing about `rustc`
 
 My problem was that I was using `make TAGS.vi`. This target (helpfully?)
 excludes parsing the internal compiler crates, instead providing tags only for
 the standard library. So to provide tags for my purposes, I instead run:
 
-{% highlight shell %}
+```terminal
 $ ctags --options=./src/etc/ctags.rust --recursive -o tags ./src/librustc*
-{% endhighlight %}
+```
 
 Now that I have `ctags`, [`vim-racer`][racer], and [YouCompleteMe][ycm]
 installed, I'm finding it much easier to jump around the codebase and write Rust
@@ -85,7 +85,7 @@ code naturally. Vim tip: `ctrl-o` will move to the previous point in the jump
 stack, `ctrl-i` will move forward. Since `racer` doesn't operate on the tag
 stack, the usual `ctrl-t` binding won't work.
 
-**Using debuggers**
+### Using debuggers
 
 The most important piece for working with a debugger is ensuring that the
 `--enable-debug` flag passed during the build step above. Unlike default builds
@@ -98,7 +98,7 @@ shouldn't expect much more than printing local variables or setting breakpoints
 at lines in the current file. GDB recently [announced support for Rust][gdb],
 so hopefully this pain point is no longer an issue.
 
-**Finding documentation and getting help**
+### Finding documentation and getting help
 
 Proper documentation for the internal crates does exist, once you know how to
 find it. There are `README` files within many directories that are required
