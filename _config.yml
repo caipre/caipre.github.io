@@ -5,15 +5,19 @@ github_username: caipre
 description: >-
   Personal site for Nick Platt
 
-sass:
-  style: compressed
+permalink: /:categories/:title
+include:
+- _redirects
 
 markdown: kramdown
+sass:
+  style: compressed
 plugins:
 - jekyll-avatar
 - jekyll-feed
 - jekyll-seo-tag
 - jemoji
+
 
 defaults:
 - scope:
