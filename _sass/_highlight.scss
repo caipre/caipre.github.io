@@ -1,0 +1,80 @@
+// https://github.com/jneen/rouge/wiki/List-of-tokens
+
+.highlight  { }
+.highlight .w { } // Whitespace
+.highlight .err {  } // Error (lexer error)
+.highlight .x {  } // Other (unknown to parser)
+
+.highlight .k  {  } // Keyword
+.highlight .kc {  } // Keyword::Constant
+.highlight .kd {  } // Keyword::Declaration
+.highlight .kn {  } // Keyword::Namespace
+.highlight .kp {  } // Keyword::Pseudo
+.highlight .kr {  } // Keyword::Reserved
+.highlight .kt {  } // Keyword::Type
+
+.highlight .n  {  } // Name
+.highlight .na {  } // Name::Attribute (eg, in HTML tags)
+.highlight .nb {  } // Name::Builtin
+.highlight .bp {  } // Name::Builtin::Pseudo (eg, self in Python)
+.highlight .nc {  } // Name::Class
+.highlight .no {  } // Name::Constant
+.highlight .nd {  } // Name::Decorator
+.highlight .ni {  } // Name::Entity (eg, &nbsp; in HTML)
+.highlight .ne {  } // Name::Exception
+.highlight .nf {  } // Name::Function
+.highlight .py {  } // Name::Property
+.highlight .nn {  } // Name::Namespace
+.highlight .nx {  } // Name::Other
+.highlight .nt {  } // Name::Tag (eg, HTML tags)
+.highlight .nv {  } // Name::Variable
+.highlight .vc {  } // Name::Variable::Class
+.highlight .vg {  } // Name::Variable::Global
+.highlight .vi {  } // Name::Variable::Instance
+
+.highlight .l  {  } // Literal
+.highlight .ld {  } // Literal::Date
+.highlight .s  {  } // Literal::String
+.highlight .sb {  } // Literal::String::Backtick
+.highlight .sc {  } // Literal::String::Char
+.highlight .sd {  } // Literal::String::Doc
+.highlight .s2 {  } // Literal::String::Double-quoted
+.highlight .se {  } // Literal::String::Escaped
+.highlight .sh {  } // Literal::String::Heredoc
+.highlight .si {  } // Literal::String::Interpol
+.highlight .sx {  } // Literal::String::Other
+.highlight .sr {  } // Literal::String::Regex
+.highlight .s1 {  } // Literal::String::Single-quoted
+.highlight .ss {  } // Literal::String::Symbol
+.highlight .m  {  } // Literal::Number
+.highlight .mf {  } // Literal::Number::Float
+.highlight .mh {  } // Literal::Number::Hex (number)
+.highlight .mi {  } // Literal::Number::Integer
+.highlight .il {  } // Literal::Number::Integer::Long
+.highlight .mo {  } // Literal::Number::::Oct
+.highlight .mx {  } // Literal::Number::Hex (literal)
+.highlight .mb {  } // Literal::Number::::Binary
+
+.highlight .o  {  } // Operator
+.highlight .ow {  } // Operator::Word (eg, and)
+
+.highlight .p  {  } // Punctuation
+
+.highlight .c  {  } // Comment
+.highlight .cm {  } // Comment::Multiline
+.highlight .cp {  } // Comment::Preproc
+.highlight .c1 {  } // Comment::Single
+.highlight .cs {  } // Comment::Special (eg, @license in javadoc)
+
+.highlight .g  {  } // Generic
+.highlight .gd {  } // Generic::Deleted
+.highlight .ge {  } // Generic::Emphasized
+.highlight .gr {  } // Generic::Error
+.highlight .gh {  } // Generic::Heading
+.highlight .gi {  } // Generic::Inserted
+.highlight .go {  } // Generic::Output
+.highlight .gp {  } // Generic::Prompt
+.highlight .gs {  } // Generic::Strong
+.highlight .gu {  } // Generic::Subheading
+.highlight .gt {  } // Generic::Traceback
+.highlight .gl {  } // Generic::Lineno

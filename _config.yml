@@ -1,19 +1,24 @@
-name: Nick Platt
-description: Notes from a systems software engineer
-meta_description: Notes from a systems software engineer
-
-url: 'https://nick-platt.com'
+title: Nick Platt
+url: https://nickp.co
+email: platt.nicholas@gmail.com
+github_username: caipre
+description: >-
+  Personal site for Nick Platt
 
 sass:
   style: compressed
 
+markdown: kramdown
 plugins:
-  - jekyll-feed
+- jekyll-feed
+- jekyll-seo-tag
 
 defaults:
-  - scope:
-      path: .
-      type: posts
-    values:
-      layout: post
-      is_post: true
+- scope:
+    path: .
+    type: posts
+  values:
+    layout: post
+
+gtag: 'UA-132738950-1'
+

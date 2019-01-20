@@ -1,27 +1,14 @@
-@media screen and (max-width:768px) {
-   #container > header { margin-bottom: $short-margin; }
-   #container > footer { margin-top: $short-margin; }
-   #container > section { margin: $standard-margin 0; text-align: center; }
-   #container > * { width: auto; }
-   #about {
-      hr { margin: $short-margin 0; }
-      header { display: none; }
-      address {
-         align-items: center;
-         flex-direction: column;
-         span + span { padding-left: 0; }
-      }
-   }
-   #posts {
-      span[class^="icon-"]::before {
-         margin-left: -1.8rem;
-         margin-right: $short-margin;
-      }
-      time { display: block; }
-      li + li { margin-top: $standard-margin; }
-   }
-   article {
-      figure { margin: 0; overflow: scroll; }
-      figure pre { margin: 0; font-size: 0.8rem; }
-   }
+// mobile
+@media screen and (max-width: 768px) {
+
+}
+
+// tablet
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+
+}
+
+// desktop
+@media screen and (min-width: 1024px) {
+
 }

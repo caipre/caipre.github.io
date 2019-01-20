@@ -1,13 +1,9 @@
 ---
 ---
 
-@import 'normalize';
-@import 'fontello';
-@import 'syntax';
+@import url('https://fonts.googleapis.com/css?family=Amiri|Inconsolata|Source+Sans+Pro');
 
-@import 'constants';
-@import 'type';
-@import 'core';
-@import 'main';
-@import 'post';
-@import 'responsive';
+@import 'normalize';
+@import 'typography';
+@import 'highlight';
+@import 'layout';
