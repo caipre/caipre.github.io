@@ -19,7 +19,7 @@ night, on the train home (and extending to the morning commute), I read the
 paper describing the Raft protocol and familiarized myself with the various
 rules.
 
-### raft.rs
+## raft.rs
 
 After two false-starts, [raft.rs][] now has stable cluster communication and
 leader election. Once I had the program compiling, I added quite a bit of
@@ -42,7 +42,7 @@ resolved these design choices and learned to reason out ownership, I was able to
 write outthe majority of the program without ever running it through the borrow
 checker. That's an immensely satisfying position!
 
-### Takeaways from Rust
+## Takeaways from Rust
 
 Rust is a fantastic language. The standard library is a joy to use: builtin
 modules, traits, types, and methods are cohesive and well organized. The

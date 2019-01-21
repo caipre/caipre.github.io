@@ -25,7 +25,7 @@ On the bright side, I now have a functional REPL for a useful subset of Scheme.
 Moreover, I have a better understanding of Haskell. There's still a lot I need
 to learn, but I thought I'd share some insights.
 
-### Making analogies to Rust
+## Making analogies to Rust
 
 Rust is an excellent language, and makes quite a few functional programming
 concepts available in the context of systems programming. As my language of
@@ -93,7 +93,7 @@ myfunc str = show str
 I might revisit the comparison between these languages as I get more
 comfortable with each.
 
-### Understanding Monads and `do` notation
+## Understanding Monads and `do` notation
 
 Monads might be more subtle than I'm aware of, but for the moment I'm just
 thinking of them as a container for value that does some additional background

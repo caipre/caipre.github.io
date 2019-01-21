@@ -9,7 +9,7 @@ such auto-deref functionality exists when operating within a debugger. Instead,
 one must manually traverse the `Rc` substructure to reach `T`. This post shows
 how to do so, with some comments on the current state of debuggers.
 
-### Background
+## Background
 
 As part of [this Rust issue][issue], I have been working with with values of
 type `Rc<cmt>` . A `cmt` is [a structure][cmt] that describes the category,
@@ -58,7 +58,7 @@ We need some way to access the data held by the tuple-struct, but `lldb` doesn't
 even know what a tuple-struct is. I've not been able to get past this with
 `rust-lldb`. What can we do?
 
-### Speaking Rust
+## Speaking Rust
 
 Fortunately, `gdb` recently [announced support][gdbrust] for Rust. Let's try to
 access the data contained by the `NonZero` using `rust-gdb`:
@@ -140,7 +140,7 @@ $32 = TyS = {
 The `extern ...` keyword is required to inform `gdb` that the namespace should
 be taken from root rather than the current crate.
 
-### Final word
+## Final word
 
 For me, the ability to explore code in a debugger is invaluable. Without the
 requisite knowledge to make changes without re-compiling to see their effects,
