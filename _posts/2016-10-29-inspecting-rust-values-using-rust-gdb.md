@@ -157,7 +157,7 @@ until recently, and they can be quite useful given the limited debugger support
 Rust has. An example that enables `debug` level logs within a module under the
 borrow checker:
 
-```
+```terminal
 $ RUST_LOG=rustc_borrowck::borrowck::gather_loans=debug ./x86_64-apple-darwin/stage1/bin/rustc ...
 ```
 

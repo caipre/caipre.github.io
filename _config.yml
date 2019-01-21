@@ -5,7 +5,7 @@ github_username: caipre
 description: >-
   Personal site for Nick Platt
 
-permalink: /:categories/:title
+permalink: /:year/:month/:title
 include:
 - _redirects
 

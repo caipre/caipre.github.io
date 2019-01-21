@@ -1,0 +1,56 @@
+body {
+  padding: 10px;
+}
+
+#logo {
+  background-color: $lightgrey;
+  height: 6px;
+  margin: 2rem 0;
+  width: 128px;
+}
+
+#container {
+  margin: 0 auto 12rem;
+  max-width: 40rem;
+}
+
+.flex {
+  span.item {
+    margin-right: 0.6rem;
+  }
+
+  div.item {
+    margin-bottom: 2rem;
+  }
+}
+
+
+.meta {
+  color: $grey;
+  font-family: $sans;
+
+  .avatar {
+    border-radius: 100%;
+    box-shadow: 0 0 6px 0 $lightgrey;
+  }
+}
+
+#all-posts {
+  font-family: $sans;
+
+  h3 { margin: 0.5rem 0; }
+
+  h3:before {
+    content: '—';
+    position: relative;
+    left: -1rem;
+    width: 0;
+    margin: -0.5rem;
+    color: $lightgrey;
+  }
+
+  a:link, a:visited {
+    color: $black;
+  }
+
+}

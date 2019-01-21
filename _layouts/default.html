@@ -3,18 +3,23 @@
 <head>
   <title>{{site.title}}{% if page.title %} &#x2014; {{page.title}}{% endif %}</title>
 
-  {% include meta.html -%}
-  {% include analytics.html %}
+{% include meta.html -%}
+{% include analytics.html %}
 
   <link rel="stylesheet" href="/assets/css/core.css"/>
   <link rel="alternate" type="application/atom+xml" href="/feed.xml">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.min.js"></script>
-  {% if jekyll.environment == 'development' %}<script src="/assets/js/live.js"></script>{% endif %}
+  {% if jekyll.environment == 'development' %}
+  <script src="/assets/js/live.js"></script>
+  {% endif %}
 </head>
 
 <body>
-{{content}}
+<div id="container">
+  <div id="logo"></div>
+  {{content}}
+</div>
 <script>timeago().render(document.querySelectorAll('time:not([fixed])'));</script>
 </body>
 </html>

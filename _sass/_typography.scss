@@ -1,25 +1,47 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|PT+Sans|EB+Garamond|Amiri|Cardo:400,700|Source+Serif+Pro|Source+Sans+Pro');
 
-$mast: 'source sans pro', sans-serif;
-$body: 'source sans pro', sans-serif;
+// vertical rhythm from https://www.gridlover.net/try
 
-$color: hsl(0, 0%, 20%);
-$primary: hsl(220, 100%, 58%);
-
-$lightgrey: hsl(0, 0%, 90%);
-
-html { font-size: 20px; }
-
-body {
-  color: $color;
+html, body {
   font-family: $body;
-  font-size: 1rem;
-  line-height: 1.4rem;
+  font-size: 18px;
+  line-height: 1;
+  color: $black;
   text-rendering: optimizeLegibility;
 }
 
+h1 {
+  font-family: $head;
+  font-size: 2.6rem;
+  line-height: 0.9;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: $head;
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: 1.6rem;
+}
+
+h3 {
+  font-family: $head;
+  font-size: 1.25rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  color: $grey;
+  font-family: $head;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
 a:link, a:visited {
-  color: darken($primary, 10%);
+  color: $primary;
   text-decoration: none;
 }
 
@@ -28,42 +50,10 @@ a:active, a:hover {
   text-decoration: underline;
 }
 
-h1 {
-  font-family: $mast;
-  line-height: 2.5rem;
-  margin-top: 1.625rem;
-  margin-bottom: 3.25rem;
-}
-
-h1 + div.meta {
-  margin-top: -3rem;
-  margin-bottom: 2em;
-}
-
-h2 {
-  font-size: 1.625rem;
-  line-height: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-h3 {
-  font-size: 1.15rem;
-  line-height: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-h4 {
-  font-size: 1rem;
-  line-height: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
-
 p, ul, ol, pre, table, blockquote {
-  margin-top: 0;
-  margin-bottom: 1.25rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+  margin-bottom: 1.3rem;
 }
 
 ul ul, ol ol, ul ol, ol ul {
@@ -74,23 +64,21 @@ ul ul, ol ol, ul ol, ol ul {
 hr {
   border: 0;
   background-color: $lightgrey;
-  height: 6px;
-  margin: 1.25rem 0;
+  height: 1px;
+  margin: 2rem auto;
 }
 
 a, b, i, strong, em, small, code {
 }
 
 pre {
-  line-height: 1rem;
-  margin-left: 0.8rem;
+  line-height: 1.1;
   overflow-x: scroll;
 }
 
 code {
-  color: hsl(0, 0%, 30%);
-  font-size: 0.8em;
-  vertical-align: middle;
+  color: $grey;
+  font-size: 0.8em; // note: ems, not rems
 }
 
 sub, sup {

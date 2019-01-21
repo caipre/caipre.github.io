@@ -1,5 +1,12 @@
 // https://github.com/jneen/rouge/wiki/List-of-tokens
 
+pre.highlight {
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  padding: 0.6rem;
+}
+
 .highlight .w   { color: #aaaaaa; } // Whitespace
 .highlight .x   { color: #aaaaaa; } // Other (unknown to parser)
 .highlight .err { color: #aaaaaa; } // Error (lexer error)

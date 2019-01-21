@@ -7,7 +7,8 @@ media_folder: images/uploads
 
 collections:
 - name: post
-  label: Post
+  label: Posts
+  label_singular: Post
   folder: _posts/
   create: true
   slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -23,6 +24,10 @@ collections:
   - label: Body
     name: body
     widget: markdown
+  - label: Read Time
+    name: readtime
+    widget: readtime
   - label: Tags
     name: tags
     widget: list
+    required: false
