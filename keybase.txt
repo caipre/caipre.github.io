@@ -147,3 +147,71 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/caipre
 
 ==================================================================
+==================================================================
+https://keybase.io/caipre
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://nickp.co
+  * I am caipre (https://keybase.io/caipre) on keybase.
+  * I have a public key with fingerprint 4CA8 A480 4465 5AC1 90CD  08EF 70DE 05AE 7A63 2BC6
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01018397086532489b5fddd0a55a9b02cd268ca2b57c5f4ad6825419ada2d1182b540a",
+      "fingerprint": "4ca8a48044655ac190cd08ef70de05ae7a632bc6",
+      "host": "keybase.io",
+      "key_id": "70de05ae7a632bc6",
+      "kid": "01018397086532489b5fddd0a55a9b02cd268ca2b57c5f4ad6825419ada2d1182b540a",
+      "uid": "c5320abad17154bd4af71b9695157f00",
+      "username": "caipre"
+    },
+    "service": {
+      "hostname": "nickp.co",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1548052590,
+  "expire_in": 157680000,
+  "prev": "474defd80b78cbf320d1bbaf25b5f36a55c27e7c91ae9fc5535390a7995c79ce",
+  "seqno": 20,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.80
+Comment: https://keybase.io/crypto
+
+yMIfAnicrVJbSBRRGN7NtFxYEoJ86AKN9rbVmdk5c1mSEJXo4kJ0I1CWM+ecWSfX
+mXV2XNvsZoYIkVCg5VPYElEhSiFdqMhLJCakRlqhgWk9GEU3UMKoM1JvPXZeDuf/
+v/873/fx9/szPD7vdM6pWH44PeZ92nO+xlNWUmHWcZpFUlyojqukixeNEZpwIpUG
+4UIc4AGvBFUZKBIMCqKialAnhAAEIVI1IGAiSApGggZlDHUREUkRoMiriCCB8LzC
+GiJAXIDTDTNK7bhtmA6jFTFSkKgAUZQYEeZVgAlQqC4DQgFEVEZSUNCwxAYrrIQ7
+wcRpKEE3GRarsUdkUd4/8P9Zd80iHWYkAGmI8DIPRY2ISJd5TZVUyENZB8AFJqht
+oirqopERtyl3LMCxWtLA1I3V9fGnbxq4Mr4Ju07ituVY2IqxaoXjxBMhd8pJxV1Y
+LdUifwgimmESliCbSFI7YVgmF+IZEjuGy8g0KQAKUAUBjh6OGzaNGC4CypIC2HH/
+oUk3d1kkVCcK0GQFazozRXhNQ7oAWT5BiaWDBZnKWOURVXUMYRAGVYBkVYVYVpkR
+11K1aXEhgZE6KMo4E0bURE6Na7j3UdlSj9fnycpc4q6Wx5ed83fhbvcs+7Uz7Vy7
+OTHVOtXVcX1LTd14+ayPgLJ04PjAUk8kM2PoR8w3dACqBW/55wtz4YmP/tef352z
+zw62T2aG+3aMgEb7AZe3eXd56Zms1Inpm11rWgfjQ7kprz+/Zbat5HHgyt2RC9er
+S+8MDrQnha6q+baZDaHObfsaK74vKcf+ukMrG5p7JqP3C/f3rihd5+m/6NzLs4tm
+jgwXy+vD33IO3hq/PLZ8Vz6YelX2oXWys+9Z/ap0UdbBgj3FT2rbGwoXbmxPPdyr
+NG3dePRNs/WCPzma+7VjMlb/aLTrfeFA0fuRn8kPKh1+2SSubgl8OT33KTvQ/bE7
+XT+/+0rbw5m1V2cu/QZCrkPl
+=3Sj6
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/caipre
+
+==================================================================
