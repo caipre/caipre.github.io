@@ -30,6 +30,17 @@ layout: default
       {{content}}
     </section>
 
+    <footer>
+      <hr/>
+      <div class="flex justify-between">
+        <span class="item">{% if page.previous %}
+          <a href="{{page.previous.url}}">&#8676; Previous</a>{% endif %}</span>
+        <span class="item">
+          <a href="{{site.url}}">Index</a></span>
+        <span class="item">{% if page.next %}
+        <a href="{{page.next.url}}">Next &#8677;</a>{% endif %}</span>
+      </div>
+    </footer>
   </article>
 
 </main>

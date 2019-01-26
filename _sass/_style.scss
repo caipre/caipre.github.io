@@ -15,12 +15,12 @@ body {
 }
 
 .flex {
-  span.item {
-    margin-right: 0.6rem;
-  }
-
   div.item {
     margin-bottom: 2rem;
+  }
+
+  span.item {
+    margin-right: 1rem;
   }
 }
 
@@ -31,7 +31,6 @@ body {
 
   .avatar {
     border-radius: 100%;
-    box-shadow: 0 0 6px 0 $lightgrey;
   }
 }
 
