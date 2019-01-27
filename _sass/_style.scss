@@ -51,5 +51,9 @@ body {
   a:link, a:visited {
     color: $black;
   }
+}
 
+main article img {
+  display: block;
+  margin: 0 auto;
 }
